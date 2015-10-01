@@ -1,0 +1,240 @@
+%================================================================
+
+\documentclass[11pt]{article}
+
+\usepackage{amsgen,amsmath,amstext,amsbsy,amsopn,amssymb,amscd}
+\usepackage{graphicx}% Include figure files
+
+\usepackage{epsfig}
+\usepackage{cases}
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{subfigure}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{placeins}
+\usepackage{hyperref}
+\textwidth 7.5in \textheight 9.5in \topmargin -1in \oddsidemargin -.5in
+\parskip .1in
+\renewcommand{\baselinestretch}{1.2} % double spaced
+
+\numberwithin{equation}{section}
+
+\newcommand{\iid}{\stackrel{\mathrm{iid}}{\sim}}
+\newcommand{\refeq}[1]{Equation (\ref{#1})} % Text Environment
+
+\numberwithin{equation}{section}
+%\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{mydef}{Definition}[section]
+\newtheorem{lem}{Lemma}[section]
+\newtheorem{cor}{Corollary}[section]
+\newtheorem{prop}{Proposition}[section]
+
+\newcommand{\so}{{\textsc{Solution.\;\;}}}
+\newcommand{\pf}{\textsc{Proof:\;\;}}
+\newcommand{\pb}[1]{\vspace{.2in}\noindent{\bf #1.}}
+\newcommand{\ce}{\textsc{Counter Example.\;\;}}
+
+%% \newcommand {\reals}  {{\rm I \! R}}
+\newcommand {\reals}  {\mathbb{R}}
+\newcommand {\eps}  {{\epsilon}}      % sheer laziness
+
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\cM}{{\mathcal{M}}}
+\newcommand{\Mall}{{\mathcal{M}_{\rm all}}}
+\newcommand{\tcM}{{\tilde{\mathcal{M}}}}
+\newcommand{\cN}{{\mathcal{N}}}
+
+\newcommand{\0}{{\mathbf{0}}}
+\newcommand{\1}{{\mathbf{1}}}
+\renewcommand{\a}{{\mathbf{a}}}
+\renewcommand{\b}{{\mathbf{b}}}
+\renewcommand{\c}{{\mathbf{c}}}
+\renewcommand{\d}{{\mathbf{d}}}
+\newcommand{\e}{{\mathbf{e}}}
+\newcommand{\f}{{\mathbf{f}}}
+\renewcommand{\l}{{\boldsymbol{l}}}
+\newcommand{\ls}{{\boldsymbol{\bar{l}}}}
+\renewcommand{\o}{{\mathbf{o}}}
+\newcommand{\p}{{\mathbf{p}}}
+\newcommand{\q}{{\mathbf{q}}}
+\newcommand{\res}{{\mathbf{r}}}
+\newcommand{\tres}{{\mathbf{\tilde{r}}}}
+\renewcommand{\u}{{\mathbf{u}}}
+\renewcommand{\v}{{\mathbf{v}}}
+\newcommand{\w}{{\mathbf{w}}}
+\newcommand{\x}{{\mathbf{x}}}
+\newcommand{\y}{{\mathbf{y}}}
+\newcommand{\z}{{\mathbf{z}}}
+\newcommand{\A}{{\mathbf{A}}}
+\newcommand{\B}{{\mathbf{B}}}
+\newcommand{\C}{{\mathbf{C}}}
+\newcommand{\D}{{\mathbf{D}}}
+\newcommand{\E}{{\mathbf{E}}}
+\newcommand{\F}{{\mathrm{F}}}
+\newcommand{\G}{{\mathbf{G}}}
+\renewcommand{\H}{{\mathbf{H}}}
+\newcommand{\I}{{\mathbf{I}}}
+\newcommand{\J}{{\mathbf{J}}}
+\renewcommand{\L}{{\mathbf{L}}}
+\newcommand{\M}{{\mathbf{M}}}
+\renewcommand{\O}{{\mathbf{O}}}
+\renewcommand{\P}{{\mathbf{P}}}
+\newcommand{\Q}{{\mathbf{Q}}}
+\newcommand{\R}{{\mathbf{R}}}
+\renewcommand{\S}{{\mathbf{S}}}
+\newcommand{\U}{{\mathbf{U}}}
+\newcommand{\V}{{\mathbf{V}}}
+\newcommand{\W}{{\mathbf{W}}}
+\newcommand{\X}{{\mathbf{X}}}
+\newcommand{\Y}{{\mathbf{Y}}}
+\newcommand{\Z}{{\mathbf{Z}}}
+
+\newcommand{\KSch}{{K_{\rm Sch}}}
+\newcommand{\Korth}{{K_{\rm orth}}}
+
+\newcommand{\Beta}{{\mathrm{B}}}
+\newcommand{\hM}{{\mathrm{\hat{M}}}}
+\newcommand{\hF}{{F^Z_{p-1}}}
+\newcommand{\rM}{\mathrm{M}}
+\newcommand{\rF}{\mathrm{F}}
+\newcommand{\Unif}{\mathrm{Unif}}
+
+\newcommand{\tP}{{\mathbf{\tilde{P}}}}
+\newcommand{\tX}{{\mathbf{\tilde{X}}}}
+\newcommand{\tY}{{\mathbf{\tilde{Y}}}}
+\newcommand{\tBmu}{{\mathbf{\tilde{{\boldsymbol{\mu}}}}}}
+\newcommand{\tl}{{\mathbf{\tilde{l}}}}
+\newcommand{\tu}{{\mathbf{\tilde{u}}}}
+\newcommand{\tv}{{\mathbf{\tilde{v}}}}
+\newcommand{\tM}{{\tilde{\mathrm{M}}}}
+
+\newcommand{\bX}{{\mathbf{\bar{X}}}}
+\newcommand{\by}{{\mathbf{\bar{y}}}}
+
+\newcommand{\Bbeta}{{\boldsymbol{\beta}}}
+\newcommand{\Beps}{{\boldsymbol{\epsilon}}}
+\newcommand{\Bmu}{{\boldsymbol{\mu}}}
+\newcommand{\Btheta}{{\boldsymbol{\theta}}}
+
+\newcommand{\hBb}{{\boldsymbol{\hat{\beta}}}}
+\newcommand{\hb}{{\hat{\beta}}}
+\newcommand{\hY}{{\mathbf{\hat{Y}}}}
+\newcommand{\htY}{{\mathbf{\tilde{\hat{Y}}}}}
+\newcommand{\hsig}{{\hat{\sigma}}}
+\newcommand{\hH}{{\hat{H}}}
+
+\newcommand{\bPi}{\boldsymbol{\Pi}}
+\newcommand{\bPhi}{\boldsymbol{\Phi}}
+\newcommand{\bSigma}{\boldsymbol{\Sigma}}
+\newcommand{\bOmega}{\boldsymbol{\Omega}}
+\newcommand{\bDelta}{\boldsymbol{\Delta}}
+\newcommand{\Btau}{\boldsymbol{\tau}}
+\newcommand{\Bphi}{\boldsymbol{\phi}}
+\newcommand{\Bgamma}{\boldsymbol{\gamma}}
+\newcommand{\Bzeta}{\boldsymbol{\zeta}}
+\newcommand{\Bpsi}{\boldsymbol{\psi}}
+
+%% \newcommand{\Prob}{{\rm P}}
+%% \newcommand{\Ept}{{\rm E}}
+\newcommand{\Var}{{\rm Var}}
+\newcommand{\rank}{\mathrm{rank}}
+\newcommand{\var}{\mathrm{var}}
+\newcommand{\spanof}{\mathrm{span}}
+\newcommand{\CI}{\mathrm{CI}}
+%\newcommand{\tr}{{\rm tr}}
+\newcommand{\CV}{\operatorname{\rm CV}}
+\newcommand{\GCV}{\operatorname{\rm GCV}}
+\newcommand{\diag}{\mathrm{diag}}
+\newcommand{\pval}{\mathrm{pval}}
+\newcommand{\SPAR}{\mathrm{SPAR}}
+\newcommand{\SPARone}{\hbox{\tiny\rm S\!P\!A\!R\!1}}
+\newcommand{\VIF}{{V\!I\!F}}
+
+\newcommand{\pnorm}[1]{{[\![}#1{]\!]}}
+\newcommand{\plangle}{{\langle\!\langle}}
+\newcommand{\prangle}{{\rangle\!\rangle}}
+\newcommand{\argmin}{\mathrm{argmin}}
+\newcommand{\argmax}{\mathrm{argmax}}
+\newcommand{\ip}[2]{\langle #1 , #2 \rangle}
+\newcommand{\blue}[1]{{\color{blue}#1}}
+\newcommand{\red}[1]{{\color{red}#1}}
+
+
+\newcommand{\vX}{\vec{\mathbf{X}}}
+\newcommand{\Beeta}{{\boldsymbol{\eta}}}
+\newcommand{\Bsigma}{\boldsymbol{\sigma}}
+\newcommand{\ed}{\hfill$\square$}
+
+
+
+\newcommand{\Tcal}{\mathcal{T}}
+\newcommand{\acal}{\mathcal{A}}
+\newcommand{\bcal}{\mathcal{B}}
+\newcommand{\ccal}{\mathcal{C}}
+\newcommand{\dcal}{\mathcal{D}}
+\newcommand{\ecal}{\mathcal{E}}
+\newcommand{\fcal}{\mathcal{F}}
+\newcommand{\gcal}{\mathcal{G}}
+\newcommand{\hcal}{\mathcal{H}}
+\newcommand{\kcal}{\mathcal{K}}
+\newcommand{\lcal}{\mathcal{L}}
+\newcommand{\ncal}{\mathcal{N}}
+\newcommand{\pcal}{\mathcal{P}}
+\newcommand{\rcal}{\mathcal{R}}
+\newcommand{\scal}{\mathcal{S}}
+\newcommand{\tcal}{\mathcal{T}}
+\newcommand{\vcal}{\mathcal{V}}
+\newcommand{\wcal}{\mathcal{W}}
+\newcommand{\tacal}{$\mathcal{A}$}
+\newcommand{\tbcal}{$\mathcal{B}$}
+\newcommand{\tccal}{$\mathcal{C}$}
+\newcommand{\tfcal}{$\mathcal{F}$}
+\newcommand{\tgcal}{$\mathcal{G}$}
+\newcommand{\thcal}{$\mathcal{H}$}
+\newcommand{\tscal}{$\mathcal{S}$}
+
+
+
+
+%----------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------
+
+
+\begin{title}
+{\Large\bf Machine Learning Project Proposal
+}
+\end{title}
+\author{Yanqian Wang and Qunqun Yu}
+\date{}
+\maketitle
+
+%----------------------------------------------------------------
+
+%\begin{abstract}
+%\end{abstract}
+%
+%%----------------------------------------------------------------
+%
+%{\bf Keywords:}
+%
+%%----------------------------------------------------------------
+%
+
+\section{Introduction of data}
+\href{http://www.cs.nyu.edu/~ylclab/data/norb-v1.0/}{norb} and \href{http://yann.lecun.com/exdb/mnist/}{mnist}
+
+
+\end{document}
