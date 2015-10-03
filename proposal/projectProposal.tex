@@ -218,7 +218,7 @@
 }
 \end{title}
 \author{Yanqian Wang and Qunqun Yu}
-\date{}
+\date{October 2, 2015}
 \maketitle
 
 %----------------------------------------------------------------
@@ -233,36 +233,51 @@
 %%----------------------------------------------------------------
 %
 
-\section{Introduction to data}
-
-\subsection{\href{http://www.cs.nyu.edu/~ylclab/data/norb-v1.0/}{NORB}  dataset}
+\section{Literature Review}
+\subsection{ A review of the Deep Learning techniques in 3D object recognition and document recognition by Qunqun Yu}
+This part will focus on the review of several developed deep learning techniques and their advantages in the applications to computer vision such as shape recognition and documentary recognition.
+\begin{itemize}
+\item The understanding of techniques of restricted boltzmann machine (RBM), deef belief networks, and convolutional net.
+\item The comparison of above techniques based on error rates and convergence rates.
+\item Revisit the existing program on the MNIST and NORB data sets.
+\end{itemize}
+\subsubsection{\href{http://www.cs.nyu.edu/~ylclab/data/norb-v1.0/}{NORB}  dataset}
 This database is intended for experiments in 3D object recognition from shape. It contains images of 50 toys belonging to 5 generic categories: four-legged animals, human figures, airplanes, trucks, and cars. The objects were imaged by two cameras under 6 lighting conditions, 9 elevations (30 to 70 degrees every 5 degrees), and 18 azimuths (0 to 340 every 20 degrees).
 
 Popular method done on this data set is deep belief networks (\href{http://deeplearning.net/tutorial/DBN.html}{DBN}). Vinod Nair and Geoffrey E. Hinton at University of Toronto have a paper (\textit{3D Object Recognition with Deep Belief Nets}) on applying DBN on this data set.
 
-\subsection{\href{http://yann.lecun.com/exdb/mnist/}{MNIST} dataset}
+\subsubsection{\href{http://yann.lecun.com/exdb/mnist/}{MNIST} dataset}
 The MNIST database of handwritten digits, available from this page, has a training set of 60,000 examples, and a test set of 10,000 examples. It is a subset of a larger set available from NIST. The digits have been size-normalized and centered in a fixed-size image.
 
 Many methods including linear classifier, KNN, SVM, etc have been tested with this training set and test set. From the deep learning aspect, convolutional net is applied to this data set and gives a relatively satisfied result. 
 
 
-\section{Project plan}
+\subsection{A review of Curriculum Learning by Yanqian Wang}
 
-Our plan for this project include: 
+Curriculum learning inspired by the "organized" learning processes of humans can benefit machine learning algorithms. Instead of having data randomly presented, curriculum learning strategy orders the data prior to the training boosting the convergence of learning algorithm. However, while some curriculum strategies are found to be effective, some others are actually useless. Challenges are to understand the difference of those successful strategies from the failed ones and how to generate better curriculum strategies. 
+
+The review of this field will include the current strategies of curriculum learning and their application and effectiveness. 
+This review should address towards the questions below.
+
 \begin{itemize}
-\item Read the deep learning review paper written by Yann Lecun, et. al.
-
-\item Learn 3 techniques: restricted boltzmann machine (RBM), deef belief networks and convolutional net.
-
-\item Try the codes written by others on the two data sets.
-
-\item Hopefully we can try the techniques we learned on new data set.
-
-\item Write a review on curriculum learning.
+\item The reason why curriculum learning can help the training from faster convergence to better results.
+\item The differences between successful strategies and ineffective strategies.
+\item The dependence of the effectiveness of the strategies on the types of data.
+\item The generalization of the curriculum learning as a unsupervised pre-training.
+\item The limitation and potential of this learning strategy.
+\item The development of new/better curriculum strategies.
 \end{itemize}
 
-\section{Working mode}
+\section{New application and methodology development}
+\begin{itemize}
+\item Develop curriculum learning strategies for faster convergence (may get help from out-of-field studies)
+\item Apply deep learning techniques to HCP data. The objective of this application needs further discussions.
+\end{itemize}
 
-We created a repository on Github \href{https://github.com/QunqunYu/COMP790}{COMP790} and we will share our work there. 
+
+
+\section{ Plan of progress }
+A first draft of review report will be done by Nov.7th. The efforts towards new application and methodology then will be made by both authors of this proposal starting from November.
+
 
 \end{document}

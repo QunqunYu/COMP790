@@ -1,5 +1,7 @@
-\BOOKMARK [1][-]{section.1}{Introduction to data}{}% 1
-\BOOKMARK [2][-]{subsection.1.1}{NORB dataset}{section.1}% 2
-\BOOKMARK [2][-]{subsection.1.2}{MNIST dataset}{section.1}% 3
-\BOOKMARK [1][-]{section.2}{Project plan}{}% 4
-\BOOKMARK [1][-]{section.3}{Working mode}{}% 5
+\BOOKMARK [1][-]{section.1}{Literature Review}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{ A review of the Deep Learning techniques in 3D object recognition and document recognition by Qunqun Yu}{section.1}% 2
+\BOOKMARK [3][-]{subsubsection.1.1.1}{NORB dataset}{subsection.1.1}% 3
+\BOOKMARK [3][-]{subsubsection.1.1.2}{MNIST dataset}{subsection.1.1}% 4
+\BOOKMARK [2][-]{subsection.1.2}{A review of Curriculum Learning by Yanqian Wang}{section.1}% 5
+\BOOKMARK [1][-]{section.2}{New application and methodology development}{}% 6
+\BOOKMARK [1][-]{section.3}{ Plan of progress }{}% 7
